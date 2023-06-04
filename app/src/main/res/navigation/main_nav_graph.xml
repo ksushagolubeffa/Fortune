@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/login_fragment">
+
+    <fragment
+        android:id="@+id/register_fragment"
+        android:name="com.example.featureregistrationimpl.presentation.fragment.RegistrationFragment"
+        tools:layout="@layout/fragment_registration"
+        android:label="fragment_registration"
+        />
+    <fragment
+        android:id="@+id/login_fragment"
+        android:name="com.example.featureregistrationimpl.presentation.fragment.LoginFragment"
+        android:label="LoginFragment"
+        tools:layout="@layout/fragment_login"/>
+    <fragment
+        android:id="@+id/home_fragment"
+        android:name="com.example.feature_main_screen_impl.presentation.fragment.HomeFragment"
+        android:label="HomeFragment"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/action_home_fragment_to_loveListFragment"
+            app:destination="@id/loveListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/card_fragment"
+        android:name="com.example.feature_main_screen_impl.presentation.fragment.CardFragment"
+        android:label="CardFragment"
+        tools:layout="@layout/fragment_card"/>
+    <fragment
+        android:id="@+id/color_fragment"
+        android:name="com.example.feature_main_screen_impl.presentation.fragment.ColorFragment"
+        android:label="ColorFragment"
+        tools:layout="@layout/fragment_color"/>
+    <fragment
+        android:id="@+id/cookie_fragment"
+        android:name="com.example.feature_main_screen_impl.presentation.fragment.CookieFragment"
+        android:label="CookieFragment"
+        tools:layout="@layout/fragment_cookie"/>
+    <fragment
+        android:id="@+id/digit_fragment"
+        android:name="com.example.feature_main_screen_impl.presentation.fragment.DigitFragment"
+        android:label="DigitFragment"
+        tools:layout="@layout/fragment_digit"/>
+    <fragment
+        android:id="@+id/yes_fragment"
+        android:name="com.example.feature_main_screen_impl.presentation.fragment.YesFragment"
+        android:label="YesFragment"
+        tools:layout="@layout/fragment_yes"/>
+    <fragment
+        android:id="@+id/profile_fragment"
+        android:name="com.example.feature_profile_screen_impl.presentation.fragment.MainProfileFragment"
+        android:label="MainProfileFragment">
+        <action
+            android:id="@+id/action_to_home"
+            app:destination="@+id/home_fragment"
+            />
+    </fragment>
+
+    <fragment
+        android:id="@+id/edit_profile_fragment"
+        android:name="com.example.feature_profile_screen_impl.presentation.fragment.EditProfileFragment"
+        android:label="EditProfileFragment" />
+
+    <fragment
+        android:id="@+id/zodiacInfoFragment"
+        android:name="com.example.feature_signs_impl.presentation.fragments.ZodiacInfoFragment"
+        android:label="ZodiacInfoFragment"
+        tools:layout="@layout/fragment_zodiac_info">
+        <action
+            android:id="@+id/action_zodiacInfoFragment_to_chatFragment"
+            app:destination="@id/chatFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loveListFragment"
+        android:name="com.example.feature_signs_impl.presentation.fragments.LoveListFragment"
+        android:label="LoveListFragment"
+        tools:layout="@layout/fragment_love_list">
+        <action
+            android:id="@+id/action_loveListFragment_to_zodiacInfoFragment"
+            app:destination="@id/zodiacInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="com.example.feature_chat_impl.presentation.presentation.fragment.ChatFragment"
+        android:label="ChatFragment"
+        tools:layout="@layout/fragment_chat"/>
+
+</navigation>

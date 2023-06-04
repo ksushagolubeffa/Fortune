@@ -1,0 +1,30 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+rootProject.name = "Fortune Project"
+include ':app'
+include ':feature-registration-impl'
+include ':feature-registration-api'
+include ':network'
+include ':base'
+include ':database'
+include ':feature-main-screen-api'
+include ':feature-profile-screen-impl'
+include ':feature-profile-screen-api'
+include ':feature-signs-api'
+include ':feature-signs-impl'
+include ':feature-signs-impl'
+include ':feature-chat-api'
+include ':feature-chat-impl'
+include ':feature-main-screen-impl'
